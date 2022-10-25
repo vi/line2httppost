@@ -2,7 +2,7 @@
 
 Simple tool to read lines from stdin and post each line as separate POST request to a specified URL (TCP connection is reused though).
 
-Good together with [postsse](https://github.com/vi/postsse).
+Good together with [postsse](https://github.com/vi/postsse), allowing to feed CLI tools output to it.
 
 # Features
 
@@ -12,7 +12,7 @@ Good together with [postsse](https://github.com/vi/postsse).
 # Limitations
 
 * No advanced options like line delimiter
-* It waits for reposnse from server before sending the next line, so RTT affects thoughput.
+* It waits for reponse from server before sending the next line, so RTT affects thoughput.
 * Each line is fully buffered prior to starting the request, no streaming/chunking.
 
 # Installation
