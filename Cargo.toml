@@ -1,0 +1,18 @@
+[package]
+name = "line2httppost"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/vi/line2httppost"
+categories = ["command-line-utilities","network-programming","web-programming::http-client"]
+keywords = ["post", "cli", "lines", "http"]
+description = "Simple HTTP client that POSTs each incoming stdin command line to specified URL, reusing the connection if possible"
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.66"
+http = "0.2.8"
+hyper = { version = "0.14.20", features = ["client", "http1", "tcp", "http2"] }
+hyper-tls = "0.5.0"
+tokio = { version = "1.21.2", features = ["net", "rt", "macros", "time", "io-std", "io-util"] }
